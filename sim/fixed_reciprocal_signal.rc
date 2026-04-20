@@ -1,0 +1,67 @@
+Magic 271485
+Revision Verdi_V-2023.12-SP1
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 25 1920 591 224 65
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/data/home/zch_zhou28/workspace/work2026/DPRL_V2/sim/fixed_reciprocal_newton_tb.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 32760856.562649 32780356.963231
+cursor 0.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 13
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/data/home/zch_zhou28/workspace/work2026/DPRL_V2/sim/fixed_reciprocal_newton_tb.fsdb"
+addSignal -h 15 /fixed_reciprocal_newton_tb/clk
+addSignal -h 15 -holdScope arst_n
+addSignal -h 15 -holdScope valid_in
+addSignal -h 15 -UNSIGNED -HEX -holdScope a[15:0]
+addSignal -h 15 -holdScope valid_out
+addSignal -h 15 -UNSIGNED -HEX -holdScope reciprocal[15:0]
+addGroup "G2"
+addSignal -h 15 -UNSIGNED -UDEC /fixed_reciprocal_newton_tb/error_count[31:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope test_count[31:0]
+addSignal -h 15 -holdScope test_started
+addSignal -h 15 /fixed_reciprocal_newton_tb/u_dut/valid_reg1
+addSignal -h 15 -holdScope valid_reg2
+addSignal -h 15 -holdScope valid_reg3
+addGroup "G3"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+

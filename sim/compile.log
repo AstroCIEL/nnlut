@@ -1,0 +1,144 @@
+Command: vcs +v2k -override_timescale=100ps/1ps -full64 -debug_acc+all -sverilog \
++vcs+flush+all +lint=TFIPC-L -notice +notimingcheck -o simv -l compile.log +incdir+../rtl/pkgs \
+-f ./filelist/filelist_nnlut_sqrt_neg2_log.f
+                         Chronologic VCS (TM)
+       Version V-2023.12-SP1_Full64 -- Thu Apr  2 20:03:08 2026
+
+                    Copyright (c) 1991 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file '../rtl/PDPU/cf_math_pkg.sv'
+Parsing design file '../rtl/PDPU/pdpu_pkg.sv'
+Parsing design file '../rtl/pkgs/posit_types_pkg.sv'
+Parsing design file '../rtl/PDPU/barrel_shifter.sv'
+Parsing design file '../rtl/PDPU/booth_encoder.sv'
+Parsing design file '../rtl/PDPU/comparator.sv'
+Parsing design file '../rtl/PDPU/compressor_3to2.sv'
+Parsing design file '../rtl/PDPU/compressor_4to2.sv'
+Parsing design file '../rtl/PDPU/counter_5to3.sv'
+Parsing design file '../rtl/PDPU/fulladder.sv'
+Parsing design file '../rtl/PDPU/gen_product.sv'
+Parsing design file '../rtl/PDPU/gen_prods.sv'
+Parsing design file '../rtl/PDPU/csa_tree.sv'
+Parsing design file '../rtl/PDPU/comp_tree.sv'
+Parsing design file '../rtl/PDPU/lzc.sv'
+Parsing design file '../rtl/PDPU/mantissa_norm.sv'
+Parsing design file '../rtl/PDPU/radix4_booth_multiplier.sv'
+Parsing design file '../rtl/PDPU/posit_decoder.sv'
+Parsing design file '../rtl/PDPU/posit_encoder.sv'
+Parsing design file '../rtl/PDPU/pdpu_top.sv'
+Parsing design file '../rtl/PDPU/pdpu_top_pipelined.sv'
+Parsing included file '../rtl/PDPU/registers.svh'.
+Back to file '../rtl/PDPU/pdpu_top_pipelined.sv'.
+Parsing design file '../rtl/vpu/posit_mac.sv'
+Parsing included file '../rtl/PDPU/registers.svh'.
+Back to file '../rtl/vpu/posit_mac.sv'.
+Parsing design file '../rtl/vpu/posit_mac_kernel.sv'
+Parsing included file '../rtl/PDPU/registers.svh'.
+Back to file '../rtl/vpu/posit_mac_kernel.sv'.
+
+Note-[SV-LCM-PPWI] Package previously wildcard imported
+../rtl/vpu/posit_mac_kernel.sv, 7
+$unit
+  Package 'posit_types_pkg' already wildcard imported. 
+  Ignoring posit_types_pkg::*
+  See the SystemVerilog LRM(1800-2005), section 19.2.1.
+
+Parsing design file '../rtl/vpu/nnlut.sv'
+
+Note-[SV-LCM-PPWI] Package previously wildcard imported
+../rtl/vpu/nnlut.sv, 1
+$unit
+  Package 'posit_types_pkg' already wildcard imported. 
+  Ignoring posit_types_pkg::*
+  See the SystemVerilog LRM(1800-2005), section 19.2.1.
+
+Parsing design file '../verify/nnlut_sqrt_neg2_log_tb.sv'
+Top Level Modules:
+       pdpu_top
+       pdpu_top_pipelined
+       nnlut_sqrt_neg2_log_tb
+TimeScale is 100 ps / 1 ps
+
+Warning-[PCWM-W] Port connection width mismatch
+../rtl/vpu/posit_mac.sv, 65
+"posit_decoder #(n_o, es_o, , , (MANT_WIDTH_O + 2)) u_decoder_c( .operand_i (c_posit_i),  .sign_o (c_sign),  .rg_exp_o (c_rg_exp),  .mant_norm_o (c_mant));"
+  The following 8-bit expression is connected to 7-bit port "rg_exp_o" of 
+  module "posit_decoder", instance "u_decoder_c".
+  Expression: c_rg_exp
+  Instantiated module defined at: "../rtl/PDPU/posit_decoder.sv", 2
+  Use +lint=PCWM for more details.
+
+Starting vcs inline pass...
+
+18 modules and 0 UDP read.
+Generating code for _VCSgd_SZexs
+Generating code for _VCSgd_reYIK
+Generating code for _VCSgd_N2nk1
+recompiling package cf_math_pkg
+Generating code for _VCSgd_gLSge
+recompiling package pdpu_pkg
+Generating code for _VCSgd_HC8hb
+recompiling package posit_types_pkg
+Generating code for _VCSgd_NRe2z
+recompiling module barrel_shifter
+Generating code for _VCSgd_AAprB
+Generating code for _VCSgd_cW28N
+Generating code for _VCSgd_TzGDD
+recompiling module compressor_4to2
+Generating code for _VCSgd_fzIPz
+recompiling module counter_5to3
+Generating code for _VCSgd_j99T5
+recompiling module fulladder
+Generating code for _VCSgd_b1K0c
+recompiling module gen_product
+Generating code for _VCSgd_m3iZW
+Generating code for _VCSgd_WgK2V
+recompiling module csa_tree
+Generating code for _VCSgd_dLthK
+recompiling module comp_tree
+Generating code for _VCSgd_rB4Qp
+recompiling module lzc
+Generating code for _VCSgd_reF4t
+recompiling module mantissa_norm
+Generating code for _VCSgd_A987a
+recompiling module radix4_booth_multiplier
+Generating code for _VCSgd_KPUEd
+recompiling module posit_decoder
+Generating code for _VCSgd_jMuAd
+Generating code for _VCSgd_AKP1U
+recompiling module posit_encoder
+Generating code for _VCSgd_UAVWc
+recompiling module pdpu_top
+Generating code for _VCSgd_G1IxD
+recompiling module pdpu_top_pipelined
+Generating code for _VCSgd_ZCKcx
+recompiling module nnlut_sqrt_neg2_log_tb
+All of 18 modules done
+make[1]: Entering directory `/data/home/rh_xu30/Work/DPRL_V3_0401/sim/csrc'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/home/EDAtools/synopsys/vcs/V-2023.12-SP1/linux64/lib -L/home/EDAtools/synopsys/vcs/V-2023.12-SP1/linux64/lib \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _64751_archive_1.so \
+SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o \
+-lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /home/EDAtools/synopsys/vcs/V-2023.12-SP1/linux64/lib/vcs_tls.o \
+-Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   \
+/home/EDAtools/synopsys/vcs/V-2023.12-SP1/linux64/lib/vcs_save_restore_new.o /home/EDAtools/synopsys/verdi/V-2023.12-SP1/share/PLI/VCS/LINUX64/pli.a \
+-ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory `/data/home/rh_xu30/Work/DPRL_V3_0401/sim/csrc'
+CPU time: .843 seconds to compile + .347 seconds to elab + .156 seconds to link

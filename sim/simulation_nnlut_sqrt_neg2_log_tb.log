@@ -1,0 +1,59 @@
+Command: /data/home/rh_xu30/Work/DPRL_V3_0401/sim/./simv -l simulation_nnlut_sqrt_neg2_log_tb.log
+Chronologic VCS simulator copyright 1991-2023
+Contains Synopsys proprietary information.
+Compiler version V-2023.12-SP1_Full64; Runtime version V-2023.12-SP1_Full64;  Apr  2 20:03 2026
+*Verdi* Loading libsscore_vcs202312.so
+FSDB Dumper for VCS, Release Verdi_V-2023.12-SP1, Linux x86_64/64bit, 03/03/2024
+(C) 1996 - 2024 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'nnlut_sqrt_neg2_log_tb.fsdb'
+*Verdi* : Begin traversing the scope (nnlut_sqrt_neg2_log_tb), layer (0).
+*Verdi* : Enable +all dumping.
+*Verdi* : End of traversing.
+============================================================
+NN LUT sqrt_neg2_log - Golden Model Verification
+============================================================
+Parameters: outputs/sqrt_neg2_log_default/lut_params.json
+Domain: [0.0001, 1.0], Entries: 32
+Posit Format: <16,2>
+Golden Model: Python PositLUTInference
+============================================================
+
+[Phase 1] Loading LUT Parameters
+  Loaded breakpoints/slopes/intercepts
+
+[Phase 2] Golden Model Comparison
+------------------------------------------------------------
+Idx   Description                  x(hex)     HW y(hex)    Golden(hex)  Match     
+------------------------------------------------------------
+0     x=0.000100 (sqrt_neg2_log)   0x06a3   0x4ebf(seg1) 0x4ebf     MATCH     
+1     x=0.071521 (sqrt_neg2_log)   0x2128   0x4955(seg3) 0x4955     MATCH     
+2     x=0.142943 (sqrt_neg2_log)   0x2926   0x475c(seg5) 0x475c     MATCH     
+3     x=0.214364 (sqrt_neg2_log)   0x2db8   0x45c9(seg7) 0x45c8     MISMATCH  
+4     x=0.285786 (sqrt_neg2_log)   0x3125   0x44bd(seg10) 0x44bd     MATCH     
+5     x=0.357207 (sqrt_neg2_log)   0x336e   0x43b2(seg12) 0x43b2     MATCH     
+6     x=0.428629 (sqrt_neg2_log)   0x35b7   0x42a7(seg14) 0x42a7     MATCH     
+7     x=0.500050 (sqrt_neg2_log)   0x3800   0x419c(seg17) 0x419c     MATCH     
+8     x=0.571471 (sqrt_neg2_log)   0x3925   0x4090(seg19) 0x4090     MATCH     
+9     x=0.642893 (sqrt_neg2_log)   0x3a49   0x3f0c(seg21) 0x3f0c     MATCH     
+10    x=0.714314 (sqrt_neg2_log)   0x3b6e   0x3cf4(seg23) 0x3cf5     MISMATCH  
+11    x=0.785736 (sqrt_neg2_log)   0x3c92   0x3ade(seg26) 0x3adf     MISMATCH  
+12    x=0.857157 (sqrt_neg2_log)   0x3db7   0x38c8(seg28) 0x38c8     MATCH     
+13    x=0.928579 (sqrt_neg2_log)   0x3edb   0x34b8(seg30) 0x34bd     MISMATCH  
+14    x=1.000000 (sqrt_neg2_log)   0x4000   0x2870(seg31) 0x2880     MISMATCH  
+
+============================================================
+Test Summary
+============================================================
+Total tests:       15
+Exact match:       10
+Mismatch:          5
+Failed:            0
+Pass rate:         66.7%
+============================================================
+STATUS: 5 MISMATCHES
+$finish called from file "../verify/nnlut_sqrt_neg2_log_tb.sv", line 205.
+$finish at simulation time               312500
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 312500 ps
+CPU Time:      0.250 seconds;       Data structure size:   0.2Mb
+Thu Apr  2 20:03:21 2026

@@ -1,0 +1,10 @@
+*.pyc
+.vscode
+build
+data/
+data
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+tmp

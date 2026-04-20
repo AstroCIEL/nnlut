@@ -1,0 +1,22 @@
+function_name: mish_derivative
+domain: [-8.0, 8.0]
+num_entries: 32
+train_dataset_size: 100000
+eval_dataset_size: 200000
+output_dir: outputs/mish_derivative_default
+seed: 42
+optimizer: Adam
+learning_rate: 0.001
+epochs: 150
+batch_size: 1024
+loss_type: L1
+init_policy: random_unconstrained
+sampling:
+  strategy: hybrid
+  dense_ranges:
+    - [-4.0, 4.0]
+quantization:
+  enabled: false
+plot_enabled: true
+export_formats: [json, csv, header]
+verify_tolerance: 0.15  # mish导数变化较剧烈，使用合适的阈值

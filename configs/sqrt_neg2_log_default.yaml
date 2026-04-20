@@ -1,0 +1,22 @@
+function_name: sqrt_neg2_log
+domain: [0.0001, 1.0]
+num_entries: 32
+train_dataset_size: 100000
+eval_dataset_size: 200000
+output_dir: outputs/sqrt_neg2_log_default
+seed: 42
+optimizer: Adam
+learning_rate: 0.001
+epochs: 300
+batch_size: 1024
+loss_type: weighted_L1
+init_policy: breakpoint_oriented
+sampling:
+  strategy: hybrid
+  log_dense: true
+  log_dense_ratio: 0.6
+quantization:
+  enabled: false
+plot_enabled: true
+export_formats: [json, csv, header]
+verify_tolerance: 0.25
